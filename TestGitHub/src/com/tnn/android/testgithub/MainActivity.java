@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		TextView lblText = (TextView) findViewById(R.id.textView1);
-		lblText.setText("·´ÊÍº GitHUB");
+		lblText.setText("ทดสอบ GitHUB");
 		TextView lblLargeText = (TextView) findViewById(R.id.textView2);
 		lblLargeText.setText("gitHub นะจ๊ะ");
 	}
