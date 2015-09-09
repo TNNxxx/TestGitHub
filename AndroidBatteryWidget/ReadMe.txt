@@ -4,3 +4,4 @@
 Android battery level widget
   http://stackoverflow.com/questions/15672391/android-battery-level-widget
 
+∑¥ Õ∫
