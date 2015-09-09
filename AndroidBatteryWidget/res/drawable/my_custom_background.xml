@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle">
+    <corners 
+        android:radius="2dp"
+        android:topRightRadius="0dp"
+        android:bottomRightRadius="0dp"
+        android:bottomLeftRadius="0dp"/>
+    <stroke 
+        android:width="1dp"
+        android:color="@android:color/black"/>
+    <solid android:color="#E0F7FA"/>
+    <!-- ต้องกำหนด Solid ด้วย ไม่เช่นนั้นแล้วอาจจะได้ background เป็นสีดำ ซึ่งพบปัญหาในเครื่อง TWZ AA8 (Android4.04) -->
+    <!-- <solid android:color="@android:color/transparent"/> -->
+</shape>
