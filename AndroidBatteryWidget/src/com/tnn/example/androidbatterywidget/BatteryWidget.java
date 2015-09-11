@@ -98,7 +98,7 @@ public class BatteryWidget extends AppWidgetProvider {
 		context.getApplicationContext().startService(new Intent("com.tnn.example.androidbatterywidget.action.UPDATE"));
 //		BatteryUpdateService(context, appWidgetManager);
 		
-		onClickWidgetActivityLaunch(context, appWidgetIds); // ∑”„ÀÈ “¡“√∂§≈‘Í°∑’Ë Widget ‡æ◊ËÕ‡√’¬° Activity ‰¥È
+		onClickWidgetActivityLaunch(context, appWidgetIds); // ‡∏ó‡∏≥‡πÉ‡∏´‡πâ‡∏™‡∏≤‡∏°‡∏≤‡∏£‡∏ñ‡∏Ñ‡∏•‡∏¥‡πä‡∏Å‡∏ó‡∏µ‡πà Widget ‡πÄ‡∏û‡∏∑‡πà‡∏≠‡πÄ‡∏£‡∏µ‡∏¢‡∏Å Activity ‡πÑ‡∏î‡πâ
 	
 //		sharedPrefs = context.getSharedPreferences(widgetPrefsName, 0); 
 	}
@@ -114,17 +114,17 @@ public class BatteryWidget extends AppWidgetProvider {
 	private void onClickWidgetActivityLaunch(Context context, int[] appWidgetIds) {
 		AppWidgetManager appWidgetManager1 = AppWidgetManager.getInstance(context);
 
-	// À¡“¬‡Àµÿ ‚ª√·°√¡∑—Èß Õß Ë«π “¡“√∂∑’Ë®–„™Èß“π‰¥È‡À¡◊Õπ°—π
+		// ‡∏´‡∏°‡∏≤‡∏¢‡πÄ‡∏´‡∏ï‡∏∏ ‡πÇ‡∏õ‡∏£‡πÅ‡∏Å‡∏£‡∏°‡∏ó‡∏±‡πâ‡∏á‡∏™‡∏≠‡∏á‡∏™‡πà‡∏ß‡∏ô‡∏™‡∏≤‡∏°‡∏≤‡∏£‡∏ñ‡∏ó‡∏µ‡πà‡∏à‡∏∞‡πÉ‡∏ä‡πâ‡∏á‡∏≤‡∏ô‡πÑ‡∏î‡πâ‡πÄ‡∏´‡∏°‡∏∑‡∏≠‡∏ô‡∏Å‡∏±‡∏ô
 		
-/*		// ‡≈¬Ï‡Õ“∑Ï¢Õß«‘µ‡®Áµ
-		RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_battery_widget_main);
-		// Activity ∑’Ë®–„ÀÈ∑”ß“π‡¡◊ËÕ¡’°“√°¥∑’Ë «‘µ‡®Áµ
-		Intent configIntent = new Intent(context, BatteryWidgetMainActivity.class);
-		PendingIntent configPendingIntent = PendingIntent.getActivity(context,  0, configIntent, 0);
-		// æ◊Èπ∑’Ë ∑’Ë®–√—∫°“√°¥ „ÀÈ„™È‡≈¬Ï‡Õ“∑Ï¢Õß «‘µ‡®Áµ
-		remoteViews.setOnClickPendingIntent(R.id.linearLayoutWidget, configPendingIntent);
-		appWidgetManager1.updateAppWidget(appWidgetIds, remoteViews);
-*/		
+		/*		// ‡πÄ‡∏•‡∏¢‡πå‡πÄ‡∏≠‡∏≤‡∏ó‡πå‡∏Ç‡∏≠‡∏á‡∏ß‡∏¥‡∏ï‡πÄ‡∏à‡πá‡∏ï
+				RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.activity_battery_widget_main);
+				// Activity ‡∏ó‡∏µ‡πà‡∏à‡∏∞‡πÉ‡∏´‡πâ‡∏ó‡∏≥‡∏á‡∏≤‡∏ô‡πÄ‡∏°‡∏∑‡πà‡∏≠‡∏°‡∏µ‡∏Å‡∏≤‡∏£‡∏Å‡∏î‡∏ó‡∏µ‡πà ‡∏ß‡∏¥‡∏ï‡πÄ‡∏à‡πá‡∏ï
+				Intent configIntent = new Intent(context, BatteryWidgetMainActivity.class);
+				PendingIntent configPendingIntent = PendingIntent.getActivity(context,  0, configIntent, 0);
+				// ‡∏û‡∏∑‡πâ‡∏ô‡∏ó‡∏µ‡πà ‡∏ó‡∏µ‡πà‡∏à‡∏∞‡∏£‡∏±‡∏ö‡∏Å‡∏≤‡∏£‡∏Å‡∏î ‡πÉ‡∏´‡πâ‡πÉ‡∏ä‡πâ‡πÄ‡∏•‡∏¢‡πå‡πÄ‡∏≠‡∏≤‡∏ó‡πå‡∏Ç‡∏≠‡∏á ‡∏ß‡∏¥‡∏ï‡πÄ‡∏à‡πá‡∏ï
+				remoteViews.setOnClickPendingIntent(R.id.linearLayoutWidget, configPendingIntent);
+				appWidgetManager1.updateAppWidget(appWidgetIds, remoteViews);
+		*/		
 		// How To Code an Android Widget
 		//  http://www.sitepoint.com/how-to-code-an-android-widget/
 		final int N = appWidgetIds.length;
@@ -470,7 +470,7 @@ public class BatteryWidget extends AppWidgetProvider {
 	
 	// Java. How to append text to top of file.txt
 	//   http://stackoverflow.com/questions/16665124/java-how-to-append-text-to-top-of-file-txt
-	// µÈÕß°“√∑’Ë®–„ÀÈ‡æ‘Ë¡¢ÈÕ¡Ÿ≈≈ß‰ø≈Ï„π∫√√∑—¥·√° ·µËµ—«Õ¬Ë“ßπ’È„™È‰¡Ë‰¥È
+	// ‡∏ï‡πâ‡∏≠‡∏á‡∏Å‡∏≤‡∏£‡∏ó‡∏µ‡πà‡∏à‡∏∞‡πÉ‡∏´‡πâ‡πÄ‡∏û‡∏¥‡πà‡∏°‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•‡∏•‡∏á‡πÑ‡∏ü‡∏•‡πå‡πÉ‡∏ô‡∏ö‡∏£‡∏£‡∏ó‡∏±‡∏î‡πÅ‡∏£‡∏Å ‡πÅ‡∏ï‡πà‡∏ï‡∏±‡∏ß‡∏≠‡∏¢‡πà‡∏≤‡∏á‡∏ô‡∏µ‡πâ‡πÉ‡∏ä‡πâ‡πÑ‡∏°‡πà‡πÑ‡∏î‡πâ
 	public static void appendTopLog(String text) {
 		try {
 			RandomAccessFile file = new RandomAccessFile(new File("sdcard/BatteryWidgetTopLog.txt"), "rw");
@@ -490,11 +490,11 @@ public class BatteryWidget extends AppWidgetProvider {
 	// Writing in the beginning of a text file Java
 	//   http://stackoverflow.com/questions/6127648/writing-in-the-beginning-of-a-text-file-java
 	//     InputStream inputStream = new SequenceInputStream(new ByteArrayInputStream("my line\n".getBytes()), new FileInputStream(new File("myfile.txt")));
-	//  Õ—ππ’È¬—ß‰¡Ë‰¥È∑¥≈Õß ·≈–‰¡Ë√ŸÈ«Ë“®–∑”Õ¬Ë“ß‰√ ‰¡Ë‡¢È“„®
+	//  ‡∏≠‡∏±‡∏ô‡∏ô‡∏µ‡πâ‡∏¢‡∏±‡∏á‡πÑ‡∏°‡πà‡πÑ‡∏î‡πâ‡∏ó‡∏î‡∏•‡∏≠‡∏á ‡πÅ‡∏•‡∏∞‡πÑ‡∏°‡πà‡∏£‡∏π‡πâ‡∏ß‡πà‡∏≤‡∏à‡∏∞‡∏ó‡∏≥‡∏≠‡∏¢‡πà‡∏≤‡∏á‡πÑ‡∏£ ‡πÑ‡∏°‡πà‡πÄ‡∏Ç‡πâ‡∏≤‡πÉ‡∏à
 	
 	// Inserting text into an existing file via Java
 	//   http://stackoverflow.com/questions/289965/inserting-text-into-an-existing-file-via-java
-	// µÈÕß°“√∑’Ë®–„ÀÈ‡æ‘Ë¡¢ÈÕ¡Ÿ≈≈ß‰ø≈Ï„π∫√√∑—¥·√° ·µËµ—«Õ¬Ë“ßπ’È„™È‰¥È
+	// ‡∏ï‡πâ‡∏≠‡∏á‡∏Å‡∏≤‡∏£‡∏ó‡∏µ‡πà‡∏à‡∏∞‡πÉ‡∏´‡πâ‡πÄ‡∏û‡∏¥‡πà‡∏°‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•‡∏•‡∏á‡πÑ‡∏ü‡∏•‡πå‡πÉ‡∏ô‡∏ö‡∏£‡∏£‡∏ó‡∏±‡∏î‡πÅ‡∏£‡∏Å ‡πÅ‡∏ï‡πà‡∏ï‡∏±‡∏ß‡∏≠‡∏¢‡πà‡∏≤‡∏á‡∏ô‡∏µ‡πâ‡πÉ‡∏ä‡πâ‡πÑ‡∏î‡πâ
 	public static void insertLogFile(String filename, long offset, String content) {
 		filename = "sdcard/BatteryWidgetInsertLog.txt";
 		try {

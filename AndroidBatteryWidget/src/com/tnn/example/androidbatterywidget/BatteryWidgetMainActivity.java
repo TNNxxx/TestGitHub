@@ -62,7 +62,7 @@ public class BatteryWidgetMainActivity extends Activity {
 		btnDoubleMinusVolt = (Button) findViewById(R.id.btnDoubleMinusVolt);
 		txtVoltage = (TextView) findViewById(R.id.txtVoltage);
 		
-		initialSharedPreferences(); // ��ͧ���¡��ҹ��͹��˹� Event Listener ��������ջѭ���Դ�˵ء�ó���
+		initialSharedPreferences(); // ต้องเรียกใช้งานก่อนกำหนด Event Listener จะได้ไม่มีปัญหาเกิดเหตุการณ์ซ้ำ
 		// Event Listener
 		setWidgetEventListener();
 		
