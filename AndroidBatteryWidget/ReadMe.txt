@@ -4,4 +4,7 @@
 Android battery level widget
   http://stackoverflow.com/questions/15672391/android-battery-level-widget
 
-���ͺ
+ตัวอย่างการเขียนโปรแกรมเพื่อแสดง Dialog จาก Service 
+ Custom-SMS-Popup ==> https://github.com/selmantayyar/Custom-SMS-Popup
+
+ทดสอบ

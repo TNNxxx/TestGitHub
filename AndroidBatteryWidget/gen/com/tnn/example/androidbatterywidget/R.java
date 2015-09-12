@@ -28,74 +28,86 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int border=0x7f020000;
-        public static final int ic_battery=0x7f020001;
-        public static final int ic_battery_full=0x7f020002;
-        public static final int ic_charging=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int ic_lightning=0x7f020005;
-        public static final int my_custom_background=0x7f020006;
-        public static final int widget_bg_normal=0x7f020007;
+        public static final int blue_button=0x7f020000;
+        public static final int border=0x7f020001;
+        public static final int button_text_color=0x7f020002;
+        public static final int ic_battery=0x7f020003;
+        public static final int ic_battery_full=0x7f020004;
+        public static final int ic_charging=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int ic_lightning=0x7f020007;
+        public static final int my_custom_background=0x7f020008;
+        public static final int widget_bg_normal=0x7f020009;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0a0008;
-        public static final int TextView01=0x7f0a001c;
-        public static final int TextView04=0x7f0a0020;
-        public static final int TextView05=0x7f0a002a;
-        public static final int TextView06=0x7f0a0026;
-        public static final int View01=0x7f0a001e;
-        public static final int View02=0x7f0a0021;
-        public static final int View03=0x7f0a002b;
-        public static final int View04=0x7f0a0027;
-        public static final int action_settings=0x7f0a0033;
-        public static final int btnDoubleMinusVolt=0x7f0a0012;
-        public static final int btnDoublePlusVolt=0x7f0a0013;
-        public static final int btnMinusVolt=0x7f0a0011;
-        public static final int btnMySettings=0x7f0a0017;
-        public static final int btnPlusVolt=0x7f0a0010;
-        public static final int btnSettingsWizard=0x7f0a0016;
-        public static final int chkAutoRepeat=0x7f0a0028;
-        public static final int chkHideNotifications=0x7f0a002c;
-        public static final int chkVibrate=0x7f0a0022;
+        public static final int LinearLayout1=0x7f0a0011;
+        public static final int TextView01=0x7f0a0025;
+        public static final int TextView04=0x7f0a0029;
+        public static final int TextView05=0x7f0a0033;
+        public static final int TextView06=0x7f0a002f;
+        public static final int View01=0x7f0a0027;
+        public static final int View02=0x7f0a002a;
+        public static final int View03=0x7f0a0034;
+        public static final int View04=0x7f0a0030;
+        public static final int action_settings=0x7f0a003c;
+        public static final int btnDoubleMinusVolt=0x7f0a001b;
+        public static final int btnDoublePlusVolt=0x7f0a001c;
+        public static final int btnMinusVolt=0x7f0a001a;
+        public static final int btnMySettings=0x7f0a0020;
+        public static final int btnPlusVolt=0x7f0a0019;
+        public static final int btnSettingsWizard=0x7f0a001f;
+        public static final int button2=0x7f0a0010;
+        public static final int chkAutoRepeat=0x7f0a0031;
+        public static final int chkHideNotifications=0x7f0a0035;
+        public static final int chkVibrate=0x7f0a002b;
         public static final int imageView2=0x7f0a0006;
         public static final int imgBattery=0x7f0a0005;
-        public static final int lblResult=0x7f0a0019;
+        public static final int lblResult=0x7f0a0022;
         public static final int linearLayoutWidget=0x7f0a0000;
-        public static final int relativeLayoutAutoRepeat=0x7f0a0025;
-        public static final int relativeLayoutHideNotifications=0x7f0a0029;
-        public static final int relativeLayoutRingtone=0x7f0a001b;
-        public static final int relativeLayoutSilenceAfter=0x7f0a0023;
-        public static final int relativeLayoutVibrate=0x7f0a001f;
+        public static final int message=0x7f0a000e;
+        public static final int next_button=0x7f0a000f;
+        public static final int process=0x7f0a000c;
+        public static final int relativeLayout1=0x7f0a0009;
+        public static final int relativeLayout2=0x7f0a000b;
+        public static final int relativeLayout3=0x7f0a000d;
+        public static final int relativeLayoutAutoRepeat=0x7f0a002e;
+        public static final int relativeLayoutHideNotifications=0x7f0a0032;
+        public static final int relativeLayoutRingtone=0x7f0a0024;
+        public static final int relativeLayoutSilenceAfter=0x7f0a002c;
+        public static final int relativeLayoutVibrate=0x7f0a0028;
         public static final int relativeLayoutWidget=0x7f0a0001;
-        public static final int scrollView1=0x7f0a001a;
-        public static final int seekBarBatteryLowAlarm=0x7f0a000d;
-        public static final int textView1=0x7f0a0018;
-        public static final int textView2=0x7f0a0014;
-        public static final int textView4=0x7f0a002d;
-        public static final int textView6=0x7f0a000a;
-        public static final int toggleButtonAlarmTime=0x7f0a000e;
-        public static final int toggleButtonBatteryLowAlarm=0x7f0a0009;
-        public static final int txtBatteryLowAlarm=0x7f0a000b;
+        public static final int rlmain=0x7f0a0008;
+        public static final int scrollView1=0x7f0a0023;
+        public static final int seekBarBatteryLowAlarm=0x7f0a0016;
+        public static final int textView1=0x7f0a0021;
+        public static final int textView2=0x7f0a001d;
+        public static final int textView4=0x7f0a0036;
+        public static final int textView6=0x7f0a0013;
+        public static final int title=0x7f0a000a;
+        public static final int toggleButtonAlarmTime=0x7f0a0017;
+        public static final int toggleButtonBatteryLowAlarm=0x7f0a0012;
+        public static final int txtBatteryLowAlarm=0x7f0a0014;
         public static final int txtPercent=0x7f0a0004;
-        public static final int txtRingtoneDetail=0x7f0a001d;
-        public static final int txtSilenceAfterDetail=0x7f0a000c;
+        public static final int txtRingtoneDetail=0x7f0a0026;
+        public static final int txtSilenceAfterDetail=0x7f0a0015;
         public static final int txtTempareture=0x7f0a0003;
-        public static final int txtView=0x7f0a0015;
+        public static final int txtView=0x7f0a001e;
         public static final int txtVolt=0x7f0a0002;
-        public static final int txtVoltage=0x7f0a000f;
-        public static final int view1=0x7f0a0024;
-        public static final int widget=0x7f0a002e;
-        public static final int widget_label=0x7f0a002f;
-        public static final int widget_picture=0x7f0a0032;
-        public static final int widget_site_name=0x7f0a0031;
-        public static final int widget_text=0x7f0a0030;
+        public static final int txtVoltage=0x7f0a0018;
+        public static final int view1=0x7f0a002d;
+        public static final int widget=0x7f0a0037;
+        public static final int widget_label=0x7f0a0038;
+        public static final int widget_picture=0x7f0a003b;
+        public static final int widget_site_name=0x7f0a003a;
+        public static final int widget_text=0x7f0a0039;
         public static final int widget_textview=0x7f0a0007;
     }
     public static final class layout {
         public static final int activity_battery_widget_main=0x7f030000;
-        public static final int main=0x7f030001;
-        public static final int settings_layout=0x7f030002;
-        public static final int widget_layout=0x7f030003;
+        public static final int customdialogui=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int settings_layout=0x7f030003;
+        public static final int widget_layout=0x7f030004;
     }
     public static final class menu {
         public static final int battery_widget_main=0x7f090000;
@@ -129,6 +141,7 @@ public final class R {
         public static final int widget_text=0x7f060003;
     }
     public static final class style {
+        public static final int AlertDialogLowBattery=0x7f080002;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -155,6 +168,9 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
+        /**  Dialog Transparent Theme 
+         */
+        public static final int Theme_Transparent=0x7f080003;
     }
     public static final class xml {
         public static final int hello_widget_provider=0x7f040000;

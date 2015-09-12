@@ -16,6 +16,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
@@ -23,6 +25,8 @@ import android.appwidget.AppWidgetProvider;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -31,8 +35,16 @@ import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.PowerManager;
+import android.os.Vibrator;
 import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.RemoteViews;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class BatteryWidget extends AppWidgetProvider {
@@ -215,6 +227,9 @@ public class BatteryWidget extends AppWidgetProvider {
 //						Toast.makeText(context, "Level: " + level + " \u2103", Toast.LENGTH_SHORT).show();
 //					}
 					
+//					CustomDialogClass cdc = new CustomDialogClass(getActivity());
+//					CustomDialogClass cdc = new CustomDialogClass(context);
+					
 					SharedPreferences shared = context.getSharedPreferences(widgetPrefsName, MODE_PRIVATE);
 					if(shared.getBoolean(toggleButtonBatteryLowAlarmPrefsName, false)) {
 //						Toast.makeText(context, "Toggle: ON", Toast.LENGTH_SHORT).show();
@@ -239,6 +254,92 @@ public class BatteryWidget extends AppWidgetProvider {
 							appendLog(currentDateTime + tmpToast);
 //							appendTopLog(currentDateTime + tmpToast);
 							insertLogFile("", 0, currentDateTime + tmpToast + "\r\n");
+							
+							// ตรวจสอบว่าหน้าจอเปิดอยู่หรือไม่
+							PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
+							boolean isScreenON = powerManager.isScreenOn(); // This method was deprecated in API level 20.
+																			// Use isInteractive() instead.
+							if(isScreenON) {
+								// ใช้งานได้ แต่ ต้องทำให้ Activity เป็น Transparent และจะต้องปิดตัวเองได้ เมื่อ Dialog ถูกปิด
+/*								intent.setClass(context, CustomDialogActivity.class);
+								intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+								intent.putExtra("Title", "Low Battery Alarm");
+								intent.putExtra("Message", tmpToast);
+								context.startActivity(intent);
+*/								
+								/*							// แสดงหน้าต่างแจ้งเตือน
+								AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+								alertDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+								alertDialog.setMessage(tmpToast);
+								alertDialog.setTitle("Title: Battery Widget Alert");
+								alertDialog.setIcon(R.drawable.ic_lightning);
+								alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(DialogInterface dialog, int which) {
+										return;
+									}
+								});
+								alertDialog.show();
+	*/					//	ใช้ได้	
+	 							AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialogLowBattery);
+//								builder.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+								builder
+								.setMessage(tmpToast)
+								.setTitle("Title: Low Battery")
+								.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(DialogInterface dialog, int which) {
+										// TODO Auto-generated method stub
+									}
+								});
+								AlertDialog ald = builder.create();
+								ald.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+								ald.show();
+								
+//								intent.setClass(context, CustomDialogUI.class);
+//								intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//								context.startActivity(intent);
+								
+//								CustomDialogUI customDialogUI = new CustomDialogUI();
+//								customDialogUI.dialog(context, "Title", tmpToast, null);
+															
+	/*							final Dialog dialog = new Dialog(context);
+								dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+								dialog.setContentView(R.layout.customdialogui);
+								dialog.setCancelable(false);
+								TextView m = (TextView) dialog.findViewById(R.id.message);
+								TextView t = (TextView) dialog.findViewById(R.id.title);
+								final Button n = (Button) dialog.findViewById(R.id.button2);
+								final Button p = (Button) dialog.findViewById(R.id.next_button);
+								RelativeLayout rl = (RelativeLayout) dialog.findViewById(R.id.rlmain);
+								t.setText(customDialogUI.bold("Title"));
+								m.setText(tmpToast);
+								dialog.show();
+								n.setText(customDialogUI.bold("Close"));
+								p.setText(customDialogUI.bold("OK"));
+								// color(context, rl);
+								final Vibrator vib = (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
+								n.setOnClickListener(new DialogInterface.OnClickListener() {
+									
+									@Override
+									public void onClick(DialogInterface dialog, int which) {
+										// TODO Auto-generated method stub
+										vib.vibrate(15);
+										dialog.dismiss();
+									}
+								});
+
+								p.setOnClickListener(new OnClickListener() {
+									@Override
+									public void onClick(View v) {
+										// TODO Auto-generated method stub
+										vib.vibrate(20);
+										dialog.dismiss();
+//										task.run();
+									}
+								});
+	*/							
+							}
 						}
 					}
 					updateViews(context, level, scale, temp, voltage);
